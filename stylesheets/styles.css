@@ -7,3 +7,8 @@
     border: 1px solid black;
 }
 
+.sprite {
+	background: url('imgs/Walk (9).png') no-repeat -100px -24px;
+	width: 287px;
+	height: 430px;
+}

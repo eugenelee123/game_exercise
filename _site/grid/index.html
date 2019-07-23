@@ -13,7 +13,7 @@
     <main>
         <table id="grid">
             <tr>
-                <td data-x="0" data-y="0"><img class="playerMove" src="/stylesheets/Dino Sprites/Idle (1).png" alt=""></td>
+                <td data-x="0" data-y="0"></td>
                 <td data-x="1" data-y="0"></td>
                 <td data-x="2" data-y="0"></td>
                 <td data-x="3" data-y="0"></td>
@@ -90,17 +90,17 @@
                 <td data-x="4" data-y="7">(4, 7)</td>
                 <td data-x="5" data-y="7">(5, 7)</td>
                 <td data-x="6" data-y="7">(6, 7)</td>
-                <td data-x="7" data-y="7"><img src="/stylesheets/Cat n dog Sprites/cat/Idle (1).png" alt=""></td>
+                <td data-x="7" data-y="7"></td>
             </tr>
         </table>
     </main>
 
     <h2>Player 1</h2>
     <nav id="player1">
-        <button data-direction="up">w</button>
-        <button data-direction="left">a</button>
-        <button data-direction="down">s</button>
-        <button data-direction="right">f</button>
+        <button onclick="moveUp()" data-direction="up">w</button>
+        <button onclick="moveLeft()" data-direction="left">a</button>
+        <button onclick="moveDown()" data-direction="down">s</button>
+        <button onclick="moveRight()" data-direction="right">f</button>
     </nav>
 
     <h2>Player 2</h2>
@@ -118,5 +118,8 @@
             <li>Sprite sheet CSS courtesy of <a href="http://www.spritecow.com/">Sprite Cow</a>.</li>
         </ul>
     </footer>
+    <script>
+        }
+    </script>
 </body>
 </html>

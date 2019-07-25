@@ -13,7 +13,7 @@
     <main>
         <table id="grid">
             <tr>
-                <td data-x="0" data-y="0">(0, 0)</td>
+                <td id='p1Loc' data-x="0" data-y="0"></td>
                 <td data-x="1" data-y="0">(1, 0)</td>
                 <td data-x="2" data-y="0">(2, 0)</td>
                 <td data-x="3" data-y="0">(3, 0)</td>
@@ -90,7 +90,7 @@
                 <td data-x="4" data-y="7">(4, 7)</td>
                 <td data-x="5" data-y="7">(5, 7)</td>
                 <td data-x="6" data-y="7">(6, 7)</td>
-                <td data-x="7" data-y="7">(7, 7)</td>
+                <td id='p2Loc' data-x="7" data-y="7"></td>
             </tr>
         </table>
     </main>
@@ -124,9 +124,19 @@
 
         for (let i = 0; i < cells.length; i++)
         {
-            cells[i].style.backgroundSize = "256px 187px";
             cells[i].style.backgroundImage = 'url("/stylesheets/freescifiplatform/png/Tiles/Tile (1).png")';
+            cells[i].style.width = '5em';
+            cells[i].style.height = '5em';
         }
+
+        document.getElementById('p1Loc').innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
+        document.getElementById('p2Loc').innerHTML = "<img src = '/stylesheets/Cat n Dog Sprites/dog/Idle (1).png' width='100'>";
+
+
+        /*let p1Move = document.getElementById('p1Loc');
+        let p1Img = '/stylesheets/Dino Sprites/Idle (1).png';
+        p1Move.appendChild(p1Img);*/
+
     </script>
 </body>
 </html>

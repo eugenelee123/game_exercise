@@ -13,14 +13,14 @@
     <main>
         <table id="grid">
             <tr>
-                <td data-x="0" data-y="0"></td>
-                <td data-x="1" data-y="0"></td>
-                <td data-x="2" data-y="0"></td>
-                <td data-x="3" data-y="0"></td>
-                <td data-x="4" data-y="0"></td>
-                <td data-x="5" data-y="0"></td>
-                <td data-x="6" data-y="0"></td>
-                <td data-x="7" data-y="0"></td>
+                <td data-x="0" data-y="0">(0, 0)</td>
+                <td data-x="1" data-y="0">(1, 0)</td>
+                <td data-x="2" data-y="0">(2, 0)</td>
+                <td data-x="3" data-y="0">(3, 0)</td>
+                <td data-x="4" data-y="0">(4, 0)</td>
+                <td data-x="5" data-y="0">(5, 0)</td>
+                <td data-x="6" data-y="0">(6, 0)</td>
+                <td data-x="7" data-y="0">(7, 0)</td>
             </tr>
             <tr>
                 <td data-x="0" data-y="1">(0, 1)</td>
@@ -90,17 +90,17 @@
                 <td data-x="4" data-y="7">(4, 7)</td>
                 <td data-x="5" data-y="7">(5, 7)</td>
                 <td data-x="6" data-y="7">(6, 7)</td>
-                <td data-x="7" data-y="7"></td>
+                <td data-x="7" data-y="7">(7, 7)</td>
             </tr>
         </table>
     </main>
 
     <h2>Player 1</h2>
     <nav id="player1">
-        <button onclick="moveUp()" data-direction="up">w</button>
-        <button onclick="moveLeft()" data-direction="left">a</button>
-        <button onclick="moveDown()" data-direction="down">s</button>
-        <button onclick="moveRight()" data-direction="right">f</button>
+        <button data-direction="up">w</button>
+        <button data-direction="left">a</button>
+        <button data-direction="down">s</button>
+        <button data-direction="right">f</button>
     </nav>
 
     <h2>Player 2</h2>
@@ -119,6 +119,13 @@
         </ul>
     </footer>
     <script>
+        let tbl = document.getElementById('grid');
+        let cells = tbl.getElementsByTagName('td');
+
+        for (let i = 0; i < cells.length; i++)
+        {
+            cells[i].style.backgroundSize = "256px 187px";
+            cells[i].style.backgroundImage = 'url("/stylesheets/freescifiplatform/png/Tiles/Tile (1).png")';
         }
     </script>
 </body>

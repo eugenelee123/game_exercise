@@ -97,18 +97,18 @@
 
     <h2>Player 1</h2>
     <nav id="player1">
-        <button data-direction="up">w</button>
-        <button data-direction="left">a</button>
-        <button data-direction="down">s</button>
-        <button data-direction="right">f</button>
+        <button onclick="myfunction('w')"data-direction="up">w</button>
+        <button onclick="myfunction('a')"data-direction="left">a</button>
+        <button onclick="myfunction('s')"data-direction="down">s</button>
+        <button onclick="myfunction('d')"data-direction="right">d</button>
     </nav>
 
     <h2>Player 2</h2>
     <nav id="player2">
-        <button data-direction="up">i</button>
-        <button data-direction="left">j</button>
-        <button data-direction="down">k</button>
-        <button data-direction="right">l</button>
+        <button onclick="myfunction('i')"data-direction="up">i</button>
+        <button onclick="myfunction('j')"data-direction="left">j</button>
+        <button onclick="myfunction('k')"data-direction="down">k</button>
+        <button onclick="myfunction('l')"data-direction="right">l</button>
     </nav>
 
     <footer>
@@ -200,6 +200,7 @@
                         p1yCurrent--;
                         tbl.rows[p1yCurrent].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
                     }
+
                     break;
 
                 case 'd':
@@ -291,6 +292,112 @@
 
             event.preventDefault();
         }, true);
+
+        function myfunction(n){
+            switch(n) {
+                case 'w': 
+
+                    p1yCurrent--;
+                    if(p1yCurrent >= 0) {
+                        tbl.rows[p1yCurrent+1].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/freescifiplatform/png/Tiles/Tile (1).png' width='100'>";
+                        tbl.rows[p1yCurrent].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
+                    }
+                    else {
+                        p1yCurrent++;
+                        tbl.rows[p1yCurrent].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
+
+                    }
+                    break;
+
+                case 'a':
+                    p1xCurrent--;
+                    if(p1xCurrent >= 0) {
+                        tbl.rows[p1yCurrent].cells[p1xCurrent+1].innerHTML = "<img src = '/stylesheets/freescifiplatform/png/Tiles/Tile (1).png' width='100'>";
+                        tbl.rows[p1yCurrent].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
+                    }
+                    else {
+                        p1xCurrent++;
+                        tbl.rows[p1yCurrent].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
+
+                    }
+                    break;
+
+                case 's':
+                    p1yCurrent++;
+                    if(p1yCurrent < 8) {
+                        tbl.rows[p1yCurrent-1].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/freescifiplatform/png/Tiles/Tile (1).png' width='100'>";
+                        tbl.rows[p1yCurrent].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
+                    }
+                    else {
+                        p1yCurrent--;
+                        tbl.rows[p1yCurrent].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
+                    }
+
+                    break;
+
+
+                case 'd':
+                    p1xCurrent++;
+                    if(p1xCurrent < 8) {
+                        tbl.rows[p1yCurrent].cells[p1xCurrent-1].innerHTML = "<img src = '/stylesheets/freescifiplatform/png/Tiles/Tile (1).png' width='100'>";
+                        tbl.rows[p1yCurrent].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
+                    }
+                    else {
+                        p1xCurrent--;
+                        tbl.rows[p1yCurrent].cells[p1xCurrent].innerHTML = "<img src = '/stylesheets/Dino Sprites/Idle (1).png' width='100'>";
+
+                    }
+                    break;
+
+                case 'i':
+                    p2yCurrent--;
+                    if(p2yCurrent >= 0) {
+                        tbl.rows[p2yCurrent+1].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/freescifiplatform/png/Tiles/Tile (1).png' width='100'>";
+                        tbl.rows[p2yCurrent].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/Cat n Dog Sprites/dog/Idle (1).png' width='100'>";
+                    }
+                    else {
+                        p2yCurrent++;
+                        tbl.rows[p2yCurrent].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/Cat n Dog Sprites/dog/Idle (1).png' width='100'>";
+                    }
+                    break;
+                case 'j':
+                    p2xCurrent--;
+                    if(p2xCurrent >= 0) {
+                        tbl.rows[p2yCurrent].cells[p2xCurrent+1].innerHTML = "<img src = '/stylesheets/freescifiplatform/png/Tiles/Tile (1).png' width='100'>";
+                        tbl.rows[p2yCurrent].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/Cat n Dog Sprites/dog/Idle (1).png' width='100'>";
+                    }
+                    else {
+                        p2xCurrent++;
+                        tbl.rows[p2yCurrent].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/Cat n Dog Sprites/dog/Idle (1).png' width='100'>";
+                    }
+                    break;
+                case 'k':
+                    p2yCurrent++;
+                    if(p2yCurrent < 8) {
+                        tbl.rows[p2yCurrent-1].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/freescifiplatform/png/Tiles/Tile (1).png' width='100'>";
+                        tbl.rows[p2yCurrent].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/Cat n Dog Sprites/dog/Idle (1).png' width='100'>";
+                    }
+                    else {
+                        p2yCurrent--;
+                        tbl.rows[p2yCurrent].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/Cat n Dog Sprites/dog/Idle (1).png' width='100'>";
+                    }
+                    break;
+                case 'l':
+                    p2xCurrent++;
+                    if(p2xCurrent < 8) {
+                        tbl.rows[p2yCurrent].cells[p2xCurrent-1].innerHTML = "<img src = '/stylesheets/freescifiplatform/png/Tiles/Tile (1).png' width='100'>";
+                        tbl.rows[p2yCurrent].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/Cat n Dog Sprites/dog/Idle (1).png' width='100'>";
+                    }
+                    else {
+                        p2xCurrent--;
+                        tbl.rows[p2yCurrent].cells[p2xCurrent].innerHTML = "<img src = '/stylesheets/Cat n Dog Sprites/dog/Idle (1).png' width='100'>";
+                    }
+                    break;
+                default:
+                    return;
+        }
+    };
+
 
         /*let p1Move = document.getElementById('p1Loc');
         let p1Img = '/stylesheets/Dino Sprites/Idle (1).png';

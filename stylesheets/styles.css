@@ -1,15 +1,10 @@
 #grid {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
+    /*border: 1px solid black;*/
+    width: 5em;
+    height: 5em;
     table-layout: fixed;
 }
 
 #grid tr, #grid td {
-    border: 1px solid black;
-}
-
-.p1Sprite,
-.p2Sprite {
-    width: 100px;
+    /*border: 1px solid black;*/
 }
